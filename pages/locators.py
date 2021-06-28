@@ -22,3 +22,9 @@ class ProductPageLocators:
     PRICE_BOOK = (By.CSS_SELECTOR, ".product_main > p.price_color")
     PRICE_BASKET = (By.CSS_SELECTOR, "div.alertinner > p:nth-child(1) > strong")
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages > div:nth-child(1)")
+
+
+class BasketPageLocators:
+    BUTTON_BASKET = (By.CSS_SELECTOR, ".basket-mini > span > a")
+    CONTENT_BASKET = (By.CSS_SELECTOR, "#content_inner > p")
+    ITEMS_BASKET = (By.CSS_SELECTOR, "#basket_formset")
