@@ -5,12 +5,12 @@ import pytest
 
 
 @pytest.mark.login_guest
-class TestLoginFromMainPage():
+class TestLoginFromMainPage:
     def test_guest_can_go_to_login_page(self, browser):
         link = "http://selenium1py.pythonanywhere.com/"
-        page = BasePage(browser, link)   # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес
-        page.open()                      # открываем страницу
-        page.go_to_login_page()          # выполняем метод страницы - переходим на страницу логина
+        page = BasePage(browser, link)
+        page.open()
+        page.go_to_login_page()
         page1 = LoginPage(browser, page.browser.current_url)
         page1.should_be_login_page()
 

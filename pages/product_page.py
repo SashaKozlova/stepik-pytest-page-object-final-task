@@ -4,10 +4,6 @@ from .locators import ProductPageLocators
 
 class ProductPage(BasePage):
 
-    def should_be_promo_url(self):
-        print(self.browser.current_url)
-        assert "?promo=NewYear" in self.browser.current_url, "URL does not contain ?promo="
-
     def add_to_basket(self):
         button_add_to_basket = self.browser.find_element(*ProductPageLocators.BUTTON_ADD_TO_BASKET)
         button_add_to_basket.click()
